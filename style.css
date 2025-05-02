@@ -7,47 +7,39 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bellota&display=swap');
 
-/* Estilos generales */
 body {
   font-family: 'Bellota', cursive;
   background-color: #F7E8D5;
   color: #391F10;
   line-height: 1.6;
-  
 }
 
 /* Encabezado */
 header {
-  position: relative;
   background-color: #9AAC86;
   color: white;
   text-align: center;
-  padding: 20px 20px;
+  padding: 20px;
 }
 
 header h1 {
   font-size: 3rem;
-  color: #fff;
 }
+
 header p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
   color: #ccc;
 }
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  padding-bottom: 0.5rem;
 
-}
 /* Navegación */
 nav {
   background-color: #3D5B39;
   padding: 1rem;
   text-align: center;
   position: sticky;
-  top:0;
-  z-index:1000;
+  top: 0;
+  z-index: 1000;
 }
 
 nav a {
@@ -59,19 +51,43 @@ nav a {
 }
 
 nav a:hover {
-  color: #A9C9B9
+  color: #A9C9B9;
 }
 
 /* Contenedor principal */
-main {
+main,
+.calaveras,
+.petacas,
+.timones,
+.doblones,
+.componente,
+.cartas-accion,
+.cartas-reliquia {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
 
-/* Secciones */
-section {
-  margin-bottom: 2rem;
+/* Títulos */
+section h2,
+.componente h2,
+.cartas-accion h2,
+.cartas-reliquia h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #EB5D20;
+  position: relative;
+}
+
+section h2::after,
+.componente h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 15%;
+  width: 70%;
+  border-bottom: 2px solid #3B5937;
 }
 
 /* Botones */
@@ -89,245 +105,92 @@ section {
   background-color: rgb(150, 36, 96);
 }
 
-PERSONAJES
-
-
-CALAVERAS
-.calaveras {
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 1rem;
-}
-
-.calaveras h2{
-  text-align: center;
-  color: #1C5F30;
-  margin-bottom: 1rem;
-}
-
-.descripcion-calaveras {
-  background-color: #6BB645;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  border-radius: 20px;
-  color: #fff;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto; 
-  width: 75%
-}
-PETACAS
-.petacas {
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 1rem;
-}
-
-.petacas h2{
-  text-align: center;
-  color: #931A4C;
-  margin-bottom: 1rem;
-}
-
-.descripcion-petacas {
-  background-color: #D32F58;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  border-radius: 20px;
-  color: #fff;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto; 
-  width: 75%
-}
-
-TIMONES
-.timones{
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 1rem;
-}
-
-.timones h2{
-  text-align: center;
-  color: #155B71;
-  margin-bottom: 1rem;
-}
-
-.descripcion-timones {
-  background-color: #13A78C;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  border-radius: 8px;
-  color: #fff;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto; 
-  width: 75%
-}
-
-DOBLONES
-.doblones {
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 1rem;
-}
-
-.doblones h2{
-  text-align: center;
-  color: #A83724;
-  margin-bottom: 1rem;
-}
-
+/* Secciones destacadas */
+.descripcion-calaveras,
+.descripcion-petacas,
+.descripcion-timones,
 .descripcion-doblones {
-  background-color: #ED812A;
   padding: 1rem;
-  margin-bottom: 2rem;
+  margin: 2rem auto;
   border-radius: 20px;
   color: #fff;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto; 
-  width: 75%
+  max-width: 90%;
 }
 
+.descripcion-calaveras { background-color: #6BB645; }
+.descripcion-petacas { background-color: #D32F58; }
+.descripcion-timones { background-color: #13A78C; }
+.descripcion-doblones { background-color: #ED812A; }
 
 /* Personajes */
 .personajes {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
 }
 
 .personaje {
-  display: flex;
-  flex-direction: row;
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
-  max-width: 30%;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
 }
 
 .personaje img {
-  width: 200px;
+  width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
 .lore {
   padding: 1rem;
-  overflow-y: auto;
   max-height: 200px;
   color: #4d4d4d;
+  overflow-y: auto;
 }
-MECANICAS
 
-.index body{
-	background-color: #9AAC86
-}
+/* PDFs */
 .pdf {
   display: flex;
-  justify-content: center; 
-  gap: 20px; 
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .pdf iframe {
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   height: 500px;
   border: none;
 }
 
-.componente {
-  margin: 2rem auto;
-  max-width: 1200px;
-  padding: 1rem;
-}
-
-.componente ol {
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-  margin-bottom: 1rem;
-  padding-left: 2.5%;
-  list-style-position: outside;
-}
-
+/* Listas */
+.componente ol,
 .componente ul {
-  margin-left: 2.5%;
-  margin-right: 2.5%;
+  margin: 0 2.5%;
   margin-bottom: 1rem;
   padding-left: 2.5%;
   list-style-position: outside;
 }
 
-.componente .contenedor-imagenes {
-  display: flex; /* Activa el modelo Flexbox */
-  gap: 20px; /* Establece una separación de 20px entre las imágenes */
-  justify-content: center; /* Centra las imágenes horizontalmente */
-  align-items: center; /* Centra las imágenes verticalmente */
+/* Imágenes */
+.contenedor-imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-.componente .contenedor-imagenes img {
-  width: 200px; /* Establece un ancho fijo de 200px para cada imagen */
-  height: auto; /* Mantiene la proporción de aspecto original de las imágenes */
-  object-fit: cover; /* Asegura que la imagen cubra su contenedor sin distorsionarse */
+.contenedor-imagenes img {
+  width: 200px;
+  object-fit: cover;
 }
 
-.componente h2 {
-  position: relative;
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #EB5D20;
-}
-
-.componente h2::after {
-  content: "";
-  position: absolute;
-  bottom: -5px; 
-  left: 15%; 
-  width: 70%;
-  border-bottom: 2px solid #3B5937; 
-}
-
-.componente h3 {
-  text-align: center;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.componente p {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.componente img {
-  width: 75%;
-  display: block;
-  margin-top: 2rem;
-  margin:auto
-}
-
-.cartas-accion {
-  margin: 2rem auto;
-  max-width: 1200px;
-  padding: 1rem;
-}
-
-.cartas-accion h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.cartas-accion h3 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.cartas-accion p {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
+/* Carrusel */
 .carruseles {
   display: flex;
   flex-wrap: wrap;
@@ -336,23 +199,14 @@ MECANICAS
 }
 
 .carrusel-container {
-  flex: 1 1 calc(25% - 1rem);
+  flex: 1 1 calc(50% - 1rem);
   box-sizing: border-box;
 }
 
-.carrusel-container h3 {
-  text-align: center;
-  margin-bottom: 0.5rem; 
-  margin-left: 3rem;
-  margin-right: 3rem;
-  border-bottom: 2px solid #000000;
- 
-}
-
+.carrusel-container h3,
 .carrusel-container h4 {
-  text-align: center; 
-  margin-left: 3rem;
-  margin-right: 3rem;
+  text-align: center;
+  margin: 0.5rem 3rem;
 }
 
 .carrusel {
@@ -367,89 +221,53 @@ MECANICAS
 }
 
 .slides img {
-  height: 400px;
-  width: auto;
-  display: block;
-  margin:auto
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
 }
 
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 5px;
   cursor: pointer;
-  z-index: 1;
   font-size: 14px;
   border-radius: 3px;
+  z-index: 1;
 }
 
-.prev {
-  left: 5px;
-}
+.prev { left: 5px; }
+.next { right: 5px; }
 
-.next {
-  right: 5px;
-}
-
-@media (max-width: 100px) {
-  .carrusel-container {
-    flex: 1 1 calc(50% - 1rem);
-  }
-}
-
-@media (max-width: 200px) {
-  .carrusel-container {
-    flex: 1 1 100%;
-  }
-}
-
-RELIQUIAS
-
-.cartas-reliquia {
-  margin: 2rem auto;
-  max-width: 1200px;
-  padding: 1rem;
-}
-
-.cartas-reliquia h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-FOOTER
-
+/* Footer */
 footer {
   background-color: #fff;
-  color: 4d4d4d;
+  color: #4d4d4d;
   padding: 20px 0;
   text-align: center;
 }
 
 .footer-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 4rem;
-  width:auto
+  gap: 1rem;
+  padding: 0 2rem;
 }
 
 .footer-container div {
-  flex: 1;
-  margin: 0 15px;
+  flex: 1 1 200px;
 }
 
 .footer-container h4 {
   margin-bottom: 10px;
   font-size: 18px;
   color: #EB5D20;
-}
-
-.footer-container p {
-  font-size: 14px;
 }
 
 .footer-container a {
@@ -467,4 +285,23 @@ footer {
   font-size: 14px;
   border-top: 1px solid #444;
   padding-top: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .personajes,
+  .pdf,
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .personaje {
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  .carrusel-container {
+    flex: 1 1 100%;
+  }
 }
