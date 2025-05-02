@@ -105,24 +105,6 @@ section h2::after,
   background-color: rgb(150, 36, 96);
 }
 
-/* Secciones destacadas */
-.descripcion-calaveras,
-.descripcion-petacas,
-.descripcion-timones,
-.descripcion-doblones {
-  padding: 1rem;
-  margin: 2rem auto;
-  border-radius: 20px;
-  color: #fff;
-  text-align: center;
-  max-width: 90%;
-}
-
-.descripcion-calaveras { background-color: #6BB645; }
-.descripcion-petacas { background-color: #D32F58; }
-.descripcion-timones { background-color: #13A78C; }
-.descripcion-doblones { background-color: #ED812A; }
-
 /* Personajes */
 .personajes {
   display: flex;
